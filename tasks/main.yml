@@ -36,7 +36,7 @@
 - name: Set timezone.
   timezone:
     name: "{{ ntp_timezone }}"
-  notify: restart cron
+  notify: restart_cron
 
 - name: Populate service facts.
   service_facts:
