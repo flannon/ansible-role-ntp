@@ -33,10 +33,9 @@
     state: present
   when: ansible_system == "Linux"
 
-- name: Set timezone.
+- name: Set timezone
   timezone:
     name: "{{ ntp_timezone }}"
-  notify: restart_cron
 
 - name: Populate service facts.
   service_facts:
